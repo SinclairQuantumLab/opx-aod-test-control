@@ -38,7 +38,7 @@ from minimal_jerk import emit_requested_tone
 from static_grid import apply_phase_setup
 
 SCRIPT_NAME = "04_move_set_capture"
-PLAN_PATH = PLANS_ROOT / "move_sets.json"
+PLAN_PATH = PLANS_ROOT / "move_3x3_ul_lr.json"
 
 FLAG = 0
 X_FREQ = 1
