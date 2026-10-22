@@ -1,0 +1,11 @@
+[project]
+name = "opx-aod-control"
+version = "0.1.0"
+description = "Standalone QM OPX1000 control for the two-axis AOD bench"
+requires-python = ">=3.12,<3.13"
+dependencies = ["qm-qua>=1.4.1,<2", "numpy>=1.26,<3", "pillow>=11,<13", "tifffile>=2024.8"]
+
+[tool.uv]
+# PySpin comes from the vendor wheel matching the installed native SDK.
+# Retain this separately installed package with `uv sync --inexact`.
+required-environments = ["sys_platform == 'win32' and platform_machine == 'AMD64'"]
