@@ -1,0 +1,11 @@
+__pycache__/
+.venv/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+.DS_Store
+.jw-agent/
+results/*
+!results/.gitkeep
+!results/peak_voltage_check.json

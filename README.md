@@ -67,6 +67,7 @@ The experiment cancels its job and closes its quantum machine on completion or a
 | `04_make_gif.py` | Check recorded spots and make the split-screen GIF |
 | `05_readout_benchmark.py` | Simulate serial and multitone occupancy readout |
 | `camera.py` | Spinnaker acquisition and camera-setting restoration |
+| `mj_test/` | Slow (1 s) 12×12 minimal-jerk camera-capture scripts (own config/ports) |
 | `pyproject.toml`, `uv.lock` | Python dependencies |
 
 ## Hardware

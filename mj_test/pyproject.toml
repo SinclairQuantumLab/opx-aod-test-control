@@ -1,0 +1,15 @@
+[project]
+name = "aod-tweezers-camera-capture"
+version = "0.1.0"
+description = "Camera capture variants of the 12x12 AOD tweezer QUA scripts"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "qm-qua==1.3.1",
+    "numpy>=1.26,<3",
+    "pillow>=11,<13",
+    "tifffile>=2024.8",
+]
+
+[tool.uv]
+# PySpin comes from the vendor wheel matching the installed Spinnaker SDK.
+# Retain this separately installed package with `uv sync --inexact`.
