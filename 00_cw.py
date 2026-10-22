@@ -32,7 +32,7 @@ if __name__ == "__main__":
     else:
         folder = results_path / datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S_%fZ_cw98")
         folder.mkdir(parents=True)
-        qm = qmm.open_qm(config, close_other_machines=False)
+        qm = qmm.open_qm(config, close_other_machines=True)
         job = None
         try:
             job = qm.execute(continuous_tones)  # Compile, upload and start RF output.

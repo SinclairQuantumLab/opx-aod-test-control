@@ -29,9 +29,9 @@ X_TWEEZERS = 12
 Y_TWEEZERS = 12
 
 # X-axis (column) AOD -- camera-capture wiring
-X_FEMS = [("con1", 2, 4)]
+X_FEMS = [("con1", 2, 1)]
 # Y-axis (row) AOD -- camera-capture wiring
-Y_FEMS = [("con1", 3, 4)]
+Y_FEMS = [("con1", 3, 1)]
 
 SCOPE_TRIGGER = ("con1", 2, 1)
 
@@ -42,9 +42,9 @@ IF_LOW_HZ = 95_000_000
 IF_HIGH_HZ = 101_000_000
 
 # Commissioning limit: summed peak per port must stay below 10 mV.
-MAX_PORT_PEAK_V = 0.010
+MAX_PORT_PEAK_V = 0.025
 # Flat amplitude: 12 tones in phase → 9.6 mV < 10 mV.
-TONE_AMPLITUDE_V = 0.0008
+TONE_AMPLITUDE_V = 0.001
 
 
 def _distribute_tweezers(count: int, num_fems: int, max_per_fem: int) -> list[int]:

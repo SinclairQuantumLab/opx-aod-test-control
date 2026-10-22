@@ -5,9 +5,9 @@ from pathlib import Path
 # Wiring verified on 21 October 2026: output 1 = X/right, output 2 = Y/down.
 qop_ip = "192.168.50.252"
 controller = "con1"
-fem = 3
+fems = [2,3]
 aod_1_port = 1
-aod_2_port = 2
+aod_2_port = 1
 
 # Edit these four values to change the tones independently.
 aod_1_frequency = 98_000_000  # Hz
@@ -28,10 +28,15 @@ config = {
         controller: {
             "type": "opx1000",
             "fems": {
-                fem: {
+                fems[0]: {
                     "type": "LF",
                     "analog_outputs": {
                         aod_1_port: {"offset": 0.0, "output_mode": "direct", "sampling_rate": 1e9, "upsampling_mode": "mw"},
+                    },
+                },
+                fems[1]: {
+                    "type": "LF",
+                    "analog_outputs": {
                         aod_2_port: {"offset": 0.0, "output_mode": "direct", "sampling_rate": 1e9, "upsampling_mode": "mw"},
                     },
                 },
@@ -40,12 +45,12 @@ config = {
     },
     "elements": {
         "aod_1": {
-            "singleInput": {"port": (controller, fem, aod_1_port)},
+            "singleInput": {"port": (controller, fems[0], aod_1_port)},
             "intermediate_frequency": aod_1_frequency,
             "operations": {"constant": "aod_1_constant_pulse"},
         },
         "aod_2": {
-            "singleInput": {"port": (controller, fem, aod_2_port)},
+            "singleInput": {"port": (controller, fems[1], aod_2_port)},
             "intermediate_frequency": aod_2_frequency,
             "operations": {"constant": "aod_2_constant_pulse"},
         },

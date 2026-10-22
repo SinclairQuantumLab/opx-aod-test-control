@@ -8,8 +8,8 @@ this repo.
 
 | Item | Value |
 |---|---|
-| X AOD | con1 FEM 2 port 4 |
-| Y AOD | con1 FEM 3 port 4 |
+| X AOD | con1 FEM 2 port 1 |
+| Y AOD | con1 FEM 3 port 1 |
 | Grid | 12×12 at 95–101 MHz (~0.545 MHz spacing) |
 | Amplitude | 0.8 mV peak per tone (≤ 9.6 mV coherent sum / port) |
 | Move timing | 50 µs segments × 20 000 = 1 s; 50 µs up/down ramps |

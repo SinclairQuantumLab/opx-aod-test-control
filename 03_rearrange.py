@@ -9,7 +9,7 @@ import tifffile
 from qm import QuantumMachinesManager, SimulationConfig
 from qm.qua import align, amp, assign, declare, fixed, for_, frame_rotation_2pi, pause, play, program, update_frequency
 from camera import Camera
-from configuration import config, qop_ip, camera_settings, results_path, controller, fem
+from configuration import config, qop_ip, camera_settings, results_path
 
 # Experiment settings
 simulate = False
@@ -52,10 +52,10 @@ sorting_config["pulses"] = {}
 sorting_config["waveforms"] = {}
 elements = [f"row_{r}" for r in range(7)] + [f"column_{c}" for c in range(3)]
 for r in range(7):
-    sorting_config["elements"][f"row_{r}"] = {"singleInput":{"port":(controller,fem,2)},
+    sorting_config["elements"][f"row_{r}"] = {"singleInput":copy.deepcopy(config["elements"]["aod_2"]["singleInput"]),
         "intermediate_frequency":int(grid_hz[r]), "operations":{}}
 for c in range(3):
-    sorting_config["elements"][f"column_{c}"] = {"singleInput":{"port":(controller,fem,1)},
+    sorting_config["elements"][f"column_{c}"] = {"singleInput":copy.deepcopy(config["elements"]["aod_1"]["singleInput"]),
         "intermediate_frequency":int(grid_hz[target_sites[c]]), "operations":{}}
 
 

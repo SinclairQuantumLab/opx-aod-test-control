@@ -3,4 +3,4 @@ coefs,0,0,0,0,0,0,1.0
 computation_latency_cc_01_static_image,17
 computation_latency_cc_02_row_sort_capture,17
 computation_latency_cc_03_streamed_move_capture,17
-computation_latency_cc_04_move_set_capture,17
+computation_latency_cc_04_move_set_capture,14

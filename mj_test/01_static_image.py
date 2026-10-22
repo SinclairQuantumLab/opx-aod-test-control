@@ -189,7 +189,7 @@ def main() -> None:
             "y": [list(p) for p in Y_FEMS],
         },
     }
-    qm = qmm.open_qm(config, close_other_machines=True)
+    qm = qmm.open_qm(config, close_other_machines=False)
     job = None
     try:
         job = qm.execute(prog)

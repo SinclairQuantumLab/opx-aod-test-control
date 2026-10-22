@@ -294,7 +294,7 @@ def main() -> None:
         except Exception as exc:
             print(f"Latency check skipped/failed: {exc}")
 
-    qm = qmm.open_qm(config, close_other_machines=True)
+    qm = qmm.open_qm(config, close_other_machines=False)
     run_with_camera(
         qm=qm,
         prog=prog,
